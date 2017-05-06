@@ -466,7 +466,13 @@ public class SearchServlet extends HttpServlet {
 		}
 
 		// root.put("thirdPartyResults", thirdPartyResults);
-
+        boolean shouldQueryYoutube = (request.getParameter("enable-youtube") != null);
+        
+        if (shouldQueryYoutube) {
+        	root.put("youtubeChecked", "checked");
+        } else {
+        	root.put("youtubeChecked", "");
+        }
 		try {
 			d_searchResultTemplate.process(root, response.getWriter());
 		} catch (TemplateException e) {
