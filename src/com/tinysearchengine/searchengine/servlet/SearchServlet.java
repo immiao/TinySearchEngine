@@ -47,11 +47,14 @@ import freemarker.template.TemplateExceptionHandler;
 
 public class SearchServlet extends HttpServlet {
 
+	// final double k_IDF_FIX = log((double) 351121 / 1251461);
+
         final int k_MAX_3RDPARTY_RESULTS = 15;
         final int k_MAX_SEARCH_RESULTS = 50;
         final int k_MAX_TITLE_LENGTH = 60;
         final int k_MAX_SUMMARY_LENGTH = 300;
         final double k_TF_WEIGHT = 0.7;
+
 
         Configuration d_templateConfiguration;
 
