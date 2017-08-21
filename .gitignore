@@ -88,3 +88,5 @@ local.properties
 
 servlet.war
 static/
+
+.DS_Store
